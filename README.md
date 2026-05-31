@@ -8,4 +8,5 @@ Webpage of our model aircraft club in Bavaria
 
 The website source code is available under the MIT License.
 Club logos, photographs, and content are not covered by that license.
+
 All club logos, photographs, and written content remain the property of the club and may not be reused without permission.
