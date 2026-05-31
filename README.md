@@ -17,13 +17,12 @@ Kein WordPress, kein CMS, kein JavaScript, kein PHP. Nur HTML + CSS.
 ```
 mfg-breitenbrunn/
 ├── index.html       ← die gesamte Seite (eine einzige Datei)
-├── style.css        ← alle Styles, ausgelagert
 ├── README.md        ← diese Datei
-├── logo.png         ← Vereinslogo (wird als favicon + Header verwendet)
-├── gelaende.jpg     ← Hero-Foto oben auf der Seite
-├── gelaende2.jpg    ← Foto in der Gelände-Sektion
-├── modell.jpg       ← Foto in der Modellflug-Sektion
-└── flugtag.jpg      ← Foto in der Termine-Sektion
+├── css/
+│   └── style.css    ← alle Styles
+└── images/
+    ├── logo.png     ← Vereinslogo (favicon + Header)
+    └── *.jpg/png    ← alle Fotos der Seite
 ```
 
 ---
