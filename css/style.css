@@ -182,7 +182,7 @@ footer p + p { margin-top: 0.3rem; }
 #impressum, #datenschutz { background: var(--bg-alt); }
 #impressum h2, #datenschutz h2 { font-size: 1.3rem; } */
 
-#impressum, #datenschutz { background: var(--bg-alt); font-size: 0.08rem; }
+#impressum, #datenschutz { background: var(--bg-alt); font-size: 0.5rem; }
 #impressum h2, #datenschutz h2 { font-size: 1.1rem; }
 #impressum h3, #datenschutz h3 { font-size: 0.68rem; }
 #impressum p, #datenschutz p { color: var(--soft); }
