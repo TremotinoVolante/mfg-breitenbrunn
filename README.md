@@ -4,9 +4,6 @@ Webpage of our model aircraft club in Bavaria
 
 
 
-
-
-
 © 2026 MFG Breitenbrunn e.V. All rights reserved.
 
 The website source code is available under the MIT License.
