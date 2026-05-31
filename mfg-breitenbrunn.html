@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MFG Breitenbrunn – Modellfluggruppe Bayern</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg:       #f4f1ec;
+    --bg-alt:   #edeae3;
+    --ink:      #1e1c18;
+    --ink-mid:  #4a4640;
+    --ink-soft: #7a7570;
+    --accent:   #2d5a3d;
+    --rule:     rgba(30,28,24,0.12);
+    --max:      680px;
+    --serif:    'Cormorant Garamond', Georgia, serif;
+    --sans:     'DM Sans', system-ui, sans-serif;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── LAYOUT ── */
+  .wrap {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  section {
+    padding: 5rem 0;
+    border-top: 1px solid var(--rule);
+  }
+
+  section:first-of-type { border-top: none; }
+
+  /* ── HEADER ── */
+  header {
+    padding: 5rem 0 4rem;
+    text-align: center;
+  }
+
+  .logo-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .logo-placeholder {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background: var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--serif);
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #fff;
+    letter-spacing: 0.03em;
+    opacity: 0.9;
+  }
+
+  /* Replace .logo-placeholder with actual logo img if available:
+     <img src="logo.png" alt="MFG Breitenbrunn" style="width:90px;height:90px;object-fit:contain;">
+  */
+
+  h1 {
+    font-family: var(--serif);
+    font-size: clamp(2.4rem, 6vw, 3.6rem);
+    font-weight: 500;
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+  }
+
+  .subtitle {
+    font-family: var(--sans);
+    font-size: 0.88rem;
+    font-weight: 400;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    margin-top: 0.5rem;
+  }
+
+  /* ── NAV ANCHORS ── */
+  .anchor-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.25rem 1.5rem;
+    margin-top: 2.5rem;
+    font-size: 0.82rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .anchor-nav a {
+    color: var(--ink-soft);
+    text-decoration: none;
+    padding: 0.3rem 0;
+    border-bottom: 1px solid transparent;
+    transition: color 0.2s, border-color 0.2s;
+  }
+
+  .anchor-nav a:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+  }
+
+  /* ── HEADINGS ── */
+  h2 {
+    font-family: var(--serif);
+    font-size: clamp(1.7rem, 4vw, 2.4rem);
+    font-weight: 500;
+    line-height: 1.2;
+    color: var(--ink);
+    margin-bottom: 1.5rem;
+  }
+
+  h3 {
+    font-family: var(--sans);
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.6rem;
+  }
+
+  p { margin-bottom: 1rem; color: var(--ink-mid); }
+  p:last-child { margin-bottom: 0; }
+
+  /* ── HERO IMAGE ── */
+  .hero-img {
+    width: 100%;
+    max-width: var(--max);
+    margin: 0 auto;
+    display: block;
+    border-radius: 4px;
+    aspect-ratio: 16/7;
+    object-fit: cover;
+    background: var(--bg-alt);
+  }
+
+  .hero-placeholder {
+    width: 100%;
+    max-width: var(--max);
+    margin: 0 auto;
+    border-radius: 4px;
+    aspect-ratio: 16/7;
+    background: var(--bg-alt);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--ink-soft);
+    font-size: 0.85rem;
+    letter-spacing: 0.06em;
+    border: 1px solid var(--rule);
+  }
+
+  /* ── FACT ROW ── */
+  .facts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+
+  .fact {
+    border-top: 2px solid var(--accent);
+    padding-top: 0.8rem;
+  }
+
+  .fact-num {
+    font-family: var(--serif);
+    font-size: 2.4rem;
+    font-weight: 500;
+    line-height: 1;
+    color: var(--ink);
+  }
+
+  .fact-label {
+    font-size: 0.8rem;
+    color: var(--ink-soft);
+    margin-top: 0.2rem;
+    letter-spacing: 0.04em;
+  }
+
+  /* ── GELÄNDE / FIELD DETAILS ── */
+  .field-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem 3rem;
+    margin-top: 1.5rem;
+  }
+
+  @media (max-width: 500px) {
+    .field-grid { grid-template-columns: 1fr; gap: 1rem; }
+  }
+
+  .field-item dt {
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    margin-bottom: 0.15rem;
+  }
+
+  .field-item dd {
+    font-size: 1rem;
+    color: var(--ink);
+  }
+
+  /* ── ACTIVITIES ── */
+  .activity-list {
+    list-style: none;
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+  }
+
+  .activity-list li {
+    padding-left: 1.4rem;
+    position: relative;
+    color: var(--ink-mid);
+  }
+
+  .activity-list li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-weight: 400;
+  }
+
+  /* ── CALENDAR ── */
+  .event-list {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+
+  .event {
+    display: grid;
+    grid-template-columns: 56px 1fr;
+    gap: 0 1.2rem;
+    align-items: start;
+  }
+
+  .event-date {
+    text-align: center;
+    border: 1px solid var(--rule);
+    border-radius: 3px;
+    padding: 0.3rem 0.4rem 0.25rem;
+    background: var(--bg-alt);
+  }
+
+  .event-date-day {
+    font-family: var(--serif);
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1;
+    color: var(--ink);
+  }
+
+  .event-date-mon {
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    display: block;
+    margin-top: 1px;
+  }
+
+  .event-name {
+    font-weight: 400;
+    color: var(--ink);
+    line-height: 1.3;
+    margin-bottom: 0.15rem;
+  }
+
+  .event-desc {
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+  }
+
+  /* ── CONTACT ── */
+  .contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 1.5rem;
+  }
+
+  .contact-person h4 {
+    font-family: var(--sans);
+    font-weight: 500;
+    font-size: 0.95rem;
+    color: var(--ink);
+    margin-bottom: 0.2rem;
+  }
+
+  .contact-person p {
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+    margin: 0;
+  }
+
+  .contact-person a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s;
+  }
+
+  .contact-person a:hover { border-color: var(--accent); }
+
+  /* ── MAP PLACEHOLDER ── */
+  .map-box {
+    margin-top: 2rem;
+    border-radius: 4px;
+    overflow: hidden;
+    border: 1px solid var(--rule);
+  }
+
+  .map-box iframe {
+    display: block;
+    width: 100%;
+    height: 260px;
+    border: none;
+    filter: grayscale(0.3) contrast(0.95);
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    padding: 3rem 0 4rem;
+    border-top: 1px solid var(--rule);
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--ink-soft);
+    letter-spacing: 0.04em;
+  }
+
+  footer a {
+    color: var(--ink-soft);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: color 0.2s, border-color 0.2s;
+  }
+
+  footer a:hover { color: var(--ink); border-color: var(--ink-soft); }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 600px) {
+    section { padding: 3.5rem 0; }
+    header  { padding: 3.5rem 0 3rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ══════════ HEADER ══════════ -->
+<header>
+  <div class="wrap">
+    <div class="logo-area">
+      <!--
+        Replace this div with your actual logo:
+        <img src="logo.png" alt="MFG Breitenbrunn Logo" style="width:90px;height:90px;object-fit:contain;">
+      -->
+      <div class="logo-placeholder" aria-hidden="true">MFG</div>
+      <div>
+        <h1>MFG Breitenbrunn</h1>
+        <p class="subtitle">Modellfluggruppe · Bayern · seit 1987</p>
+      </div>
+    </div>
+
+    <nav class="anchor-nav" aria-label="Seitennavigation">
+      <a href="#ueber">Über uns</a>
+      <a href="#gelaende">Gelände</a>
+      <a href="#modelle">Modellflug</a>
+      <a href="#termine">Termine</a>
+      <a href="#mitglied">Mitglied werden</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ══════════ HERO PHOTO ══════════ -->
+<div class="wrap">
+  <!--
+    Replace the placeholder below with an actual image:
+    <img class="hero-img" src="fluggelaende.jpg" alt="Fluggelände MFG Breitenbrunn">
+  -->
+  <div class="hero-placeholder" aria-label="Foto des Fluggeländes – wird noch hinzugefügt">
+    Foto Fluggelände · hier einfügen
+  </div>
+</div>
+
+<!-- ══════════ ÜBER UNS ══════════ -->
+<section id="ueber">
+  <div class="wrap">
+    <h3>Über uns</h3>
+    <h2>Fliegen verbindet.</h2>
+
+    <p>
+      Der Modellflug-Club MFG Breitenbrunn ist ein eingetragener Verein aus dem Unterallgäu in Bayern. 
+      Seit unserer Gründung treffen sich Modellflug-Begeisterte jeden Alters auf unserem Vereinsgelände 
+      – zum gemeinsamen Fliegen, Schrauben, Fachsimpeln und für eine Menge Spaß.
+    </p>
+    <p>
+      Bei uns sind Einsteiger genauso willkommen wie erfahrene Piloten. Ob Motorflug, Segelflug oder 
+      Multikopter – die Leidenschaft für das Fliegen verbindet uns alle.
+    </p>
+
+    <div class="facts">
+      <div class="fact">
+        <div class="fact-num">~30</div>
+        <div class="fact-label">aktive Mitglieder</div>
+      </div>
+      <div class="fact">
+        <div class="fact-num">seit 1987</div>
+        <div class="fact-label">Jahr der Gründung</div>
+      </div>
+      <div class="fact">
+        <div class="fact-num">DAeC</div>
+        <div class="fact-label">Mitglied im Deutschen Aero Club</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ GELÄNDE ══════════ -->
+<section id="gelaende">
+  <div class="wrap">
+    <h3>Gelände &amp; Anfahrt</h3>
+    <h2>Unser Fluggelände.</h2>
+
+    <p>
+      Unser Vereinsgelände liegt ruhig und gut erreichbar bei Breitenbrunn im Unterallgäu. 
+      Eine gepflegte Graspiste, ausreichend Platz zum Aufbauen und eine gemütliche Vereinshütte 
+      warten auf euch.
+    </p>
+
+    <dl class="field-grid">
+      <div class="field-item">
+        <dt>Adresse</dt>
+        <dd>Fluggelände MFG Breitenbrunn<br>86564 Breitenbrunn, Bayern</dd>
+      </div>
+      <div class="field-item">
+        <dt>Piste</dt>
+        <dd>Gras, ca. 120 m Länge</dd>
+      </div>
+      <div class="field-item">
+        <dt>Erlaubt</dt>
+        <dd>Motorflug, Segler, Multikopter</dd>
+      </div>
+      <div class="field-item">
+        <dt>Betrieb</dt>
+        <dd>Sonnenaufgang bis Sonnenuntergang</dd>
+      </div>
+      <div class="field-item">
+        <dt>Gäste</dt>
+        <dd>Gäste mit gültigem Versicherungsnachweis (DAeC / DMFV) willkommen</dd>
+      </div>
+      <div class="field-item">
+        <dt>Besonderheiten</dt>
+        <dd>Vereinshütte, Strom vor Ort</dd>
+      </div>
+    </dl>
+
+    <!-- OpenStreetMap embed – kein API-Key nötig -->
+    <div class="map-box">
+      <iframe
+        src="https://www.openstreetmap.org/export/embed.html?bbox=10.55%2C48.15%2C10.75%2C48.25&layer=mapnik&marker=48.20%2C10.65"
+        title="Karte Fluggelände MFG Breitenbrunn"
+        loading="lazy">
+      </iframe>
+    </div>
+    <p style="font-size:0.8rem; color:var(--ink-soft); margin-top:0.5rem;">
+      Genaue Koordinaten auf Anfrage. 
+      <a href="https://www.openstreetmap.org/?mlat=48.20&mlon=10.65#map=13/48.20/10.65" target="_blank" rel="noopener" style="color:var(--accent); text-decoration:none; border-bottom:1px solid transparent;">
+        In OpenStreetMap öffnen →
+      </a>
+    </p>
+  </div>
+</section>
+
+<!-- ══════════ MODELLFLUG ══════════ -->
+<section id="modelle">
+  <div class="wrap">
+    <h3>Was wir fliegen</h3>
+    <h2>Vom Segler bis zum Jet.</h2>
+
+    <p>
+      Bei uns ist alles vertreten – ob ruhiger Hangflug mit dem Segelflugmodell, sportlicher 
+      Motorflug, Spaß mit FPV-Coptern oder detailgetreue Scale-Modelle. Was alle eint: 
+      Sorgfalt am Boden, Können in der Luft.
+    </p>
+
+    <ul class="activity-list">
+      <li>Motorflug – Verbrenner und Elektro, alle Größen</li>
+      <li>Segelflug – Hangflug und Thermik im Unterallgäu</li>
+      <li>Multikopter &amp; FPV – geregelt nach LuftVO</li>
+      <li>Scale-Modelle – von der Piper bis zur Antonov</li>
+      <li>Schulung &amp; Ausbildung für Einsteiger</li>
+      <li>Gemeinsames Schrauben und Basteln in der Hütte</li>
+    </ul>
+
+    <p style="margin-top:1.5rem;">
+      Alle Piloten müssen vor dem Erstflug auf unserem Platz eine gültige 
+      Haftpflichtversicherung (DAeC oder DMFV) sowie – je nach Modell – den 
+      EU-Kompetenznachweis nachweisen. Wir helfen gern dabei.
+    </p>
+  </div>
+</section>
+
+<!-- ══════════ TERMINE ══════════ -->
+<section id="termine">
+  <div class="wrap">
+    <h3>Termine 2025</h3>
+    <h2>Was, wann, wo.</h2>
+
+    <p>
+      Neben dem regelmäßigen Flugbetrieb veranstalten wir jährlich ein Vereinstreffen 
+      und nehmen an regionalen Flugtagen teil. Aktuelle Termine immer hier oder auf 
+      Nachfrage beim Vorstand.
+    </p>
+
+    <div class="event-list">
+
+      <div class="event">
+        <div class="event-date">
+          <div class="event-date-day">12</div>
+          <span class="event-date-mon">Apr</span>
+        </div>
+        <div>
+          <div class="event-name">Saisoneröffnung</div>
+          <div class="event-desc">Gemeinsamer Start in die Flugsaison mit Grillen am Gelände</div>
+        </div>
+      </div>
+
+      <div class="event">
+        <div class="event-date">
+          <div class="event-date-day">07</div>
+          <span class="event-date-mon">Jun</span>
+        </div>
+        <div>
+          <div class="event-name">Offener Flugtag</div>
+          <div class="event-desc">Gäste und Besucher herzlich willkommen – Vorführungen, freies Fliegen</div>
+        </div>
+      </div>
+
+      <div class="event">
+        <div class="event-date">
+          <div class="event-date-day">20</div>
+          <span class="event-date-mon">Sep</span>
+        </div>
+        <div>
+          <div class="event-name">Herbsttreffen &amp; Jahreshauptversammlung</div>
+          <div class="event-desc">Vereinsinterne Veranstaltung für Mitglieder</div>
+        </div>
+      </div>
+
+      <div class="event">
+        <div class="event-date">
+          <div class="event-date-day">Nov</div>
+          <span class="event-date-mon">lfd.</span>
+        </div>
+        <div>
+          <div class="event-name">Winterpause – Bastelangebote</div>
+          <div class="event-desc">Kein Flugbetrieb, aber gemeinsame Bausitzungen nach Absprache</div>
+        </div>
+      </div>
+
+    </div>
+
+    <p style="margin-top:1.5rem; font-size:0.9rem; color:var(--ink-soft);">
+      Termine können sich ändern. Aktuelles immer beim Vorstand erfragen.
+    </p>
+  </div>
+</section>
+
+<!-- ══════════ MITGLIED ══════════ -->
+<section id="mitglied">
+  <div class="wrap">
+    <h3>Mitmachen</h3>
+    <h2>Mitglied werden.</h2>
+
+    <p>
+      Der Einstieg ist unkompliziert: Einfach zum Gelände kommen, schauen, fliegen sehen – 
+      und wenn es passt, Mitglied werden. Wir sind ein kleiner, freundlicher Verein und 
+      freuen uns über jeden neuen Piloten.
+    </p>
+
+    <dl class="field-grid">
+      <div class="field-item">
+        <dt>Jahresbeitrag Erwachsene</dt>
+        <dd>auf Anfrage</dd>
+      </div>
+      <div class="field-item">
+        <dt>Jahresbeitrag Jugend (&lt; 18)</dt>
+        <dd>auf Anfrage</dd>
+      </div>
+      <div class="field-item">
+        <dt>Voraussetzung</dt>
+        <dd>Gültige Modellflug-Haftpflicht (DAeC/DMFV)</dd>
+      </div>
+      <div class="field-item">
+        <dt>Gastpiloten</dt>
+        <dd>Gelegenheitsflieger nach Absprache willkommen</dd>
+      </div>
+    </dl>
+
+    <p style="margin-top:1.5rem;">
+      Noch kein Führerschein? Kein Problem. Wir bieten Einweisungen und Schulungen 
+      für Anfänger an – einfach Kontakt aufnehmen.
+    </p>
+  </div>
+</section>
+
+<!-- ══════════ KONTAKT ══════════ -->
+<section id="kontakt">
+  <div class="wrap">
+    <h3>Kontakt</h3>
+    <h2>Schreib uns.</h2>
+
+    <p>
+      Fragen zum Verein, zum Gelände oder zur Mitgliedschaft? Wir antworten gerne – 
+      einfach per Mail oder direkt am Platz vorbeikommen.
+    </p>
+
+    <div class="contact-grid">
+      <div class="contact-person">
+        <h4>1. Vorsitzender</h4>
+        <p>Name Vorname</p>
+        <p><a href="mailto:vorstand@mfg-breitenbrunn.de">vorstand@mfg-breitenbrunn.de</a></p>
+      </div>
+      <div class="contact-person">
+        <h4>Schriftführer</h4>
+        <p>Name Vorname</p>
+        <p><a href="mailto:info@mfg-breitenbrunn.de">info@mfg-breitenbrunn.de</a></p>
+      </div>
+      <div class="contact-person">
+        <h4>Verein</h4>
+        <p>MFG Breitenbrunn e.V.</p>
+        <p>86564 Breitenbrunn, Bayern</p>
+      </div>
+    </div>
+
+    <p style="margin-top:2rem; font-size:0.9rem; color:var(--ink-soft);">
+      Wir sind kein Büro – Antworten kommen meist innerhalb ein paar Tage.
+    </p>
+  </div>
+</section>
+
+<!-- ══════════ FOOTER ══════════ -->
+<footer>
+  <div class="wrap">
+    <p>MFG Breitenbrunn e.V. &nbsp;·&nbsp; Modellfluggruppe Bayern</p>
+    <p style="margin-top:0.4rem;">
+      <a href="#impressum">Impressum</a> &nbsp;·&nbsp;
+      <a href="#datenschutz">Datenschutz</a>
+    </p>
+  </div>
+</footer>
+
+<!-- ══════════ IMPRESSUM (versteckt, als Anker-Section) ══════════ -->
+<section id="impressum" style="background:var(--bg-alt); padding:3rem 0;">
+  <div class="wrap">
+    <h3>Impressum</h3>
+    <h2 style="font-size:1.4rem;">Angaben gemäß § 5 TMG</h2>
+    <p>
+      MFG Breitenbrunn e.V.<br>
+      [Straße und Hausnummer]<br>
+      86564 Breitenbrunn<br>
+      Deutschland
+    </p>
+    <p>
+      Vertreten durch: [Name 1. Vorsitzender]<br>
+      Registergericht: Amtsgericht [Ort]<br>
+      Registernummer: [VR ...]
+    </p>
+    <p>
+      Kontakt: <a href="mailto:vorstand@mfg-breitenbrunn.de" style="color:var(--accent);">vorstand@mfg-breitenbrunn.de</a>
+    </p>
+    <p style="font-size:0.85rem; color:var(--ink-soft); margin-top:1rem;">
+      Haftung für Inhalte: Als Diensteanbieter sind wir für eigene Inhalte nach § 7 Abs. 1 TMG verantwortlich. 
+      Externe Links werden zum Zeitpunkt der Verlinkung geprüft – eine dauernde Überwachung ist uns ohne 
+      konkreten Anhaltspunkt nicht zumutbar.
+    </p>
+  </div>
+</section>
+
+</body>
+</html>
