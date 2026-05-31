@@ -26,6 +26,7 @@
       <a href="#gelaende">Gelände</a>
       <a href="#modelle">Modellflug</a>
       <a href="#termine">Termine</a>
+      <a href="#wetter">Wetter</a>
       <a href="#mitglied">Mitglied werden</a>
       <a href="#kontakt">Kontakt</a>
     </nav>
@@ -199,6 +200,28 @@
     </div>
     <p style="margin-top:1.4rem; font-size:0.88rem; color:var(--soft);">
       Termine können sich ändern. Aktuelles immer beim Vorstand erfragen.
+    </p>
+  </div>
+</section>
+
+
+<section id="wetter">
+  <div class="wrap">
+    <h3>Wetter am Gelände</h3>
+    <h2>Fliegen oder nicht fliegen?</h2>
+    <p>Wettervorhersage für Breitenbrunn – damit ihr wisst ob sich der Weg lohnt.</p>
+    <div class="map">
+      <!-- Diesen iframe ersetzen: meteoblue.com → Ort suchen → Widget → Code kopieren -->
+      <iframe
+        src="https://www.meteoblue.com/de/wetter/widget/daily/breitenbrunn_deutschland_2945299?geoloc=fixed&nocurrent=0&noforecast=0&temperature=C&windspeed=kmh&precipitationamount=mm&coloured=coloured&pictoicon=0&pictoicon=1&maxtemperature=0&maxtemperature=1&mintemperature=0&mintemperature=1&windspeed=0&windspeed=1&winddirection=0&winddirection=1&uv=0&humidity=0&precipitation=0&precipitation=1&precipitationprobability=0&precipitationprobability=1&spot=0&spot=1&pressure=0&layout=image"
+        frameborder="0"
+        scrolling="no"
+        sandbox="allow-same-origin allow-scripts allow-popups allow-popups-to-escape-sandbox"
+        style="width:100%; height:350px; border:none; border-radius:4px;">
+      </iframe>
+    </div>
+    <p class="map-hint">
+      Wettervorhersage powered by <a href="https://www.meteoblue.com" target="_blank" rel="noopener">meteoblue</a>
     </p>
   </div>
 </section>
