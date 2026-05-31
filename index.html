@@ -4,17 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>MFG Breitenbrunn – Modellfluggruppe Bayern</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
   <div class="wrap">
-    <img class="hero-logo" src="logo.png" alt="MFG Breitenbrunn Logo">
-    <h1>MFG Breitenbrunn</h1>
+    <!-- Logo ersetzt h1 – so breit wie die Seite, weißer Hintergrund dahinter falls Logo weiß/transparent -->
+    <img class="header-logo" src="logo.png" alt="MFG Breitenbrunn">
     <p class="subtitle">Modellfluggruppe · Bayern · seit 1987</p>
     <nav aria-label="Seitennavigation">
       <a href="#ueber">Über uns</a>
@@ -27,8 +24,9 @@
   </div>
 </header>
 
+<!-- Hero Gelände -->
 <div class="wrap">
-  <img class="hero-img" src="platz_htte.jpg" alt="Fluggelände MFG Breitenbrunn">
+  <img class="section-img" src="gelaende.jpg" alt="Unser Fluggelände in Breitenbrunn">
 </div>
 
 <section id="ueber">
@@ -70,31 +68,15 @@
       A gepflegte Graspiste, ausreichend Platz zum Aufbauen und a gemütliche Vereinshütte
       warten auf euch.
     </p>
+    <!-- Foto Gelände unter dem Text -->
+    <img class="section-img" src="gelaende2.jpg" alt="Blick übers Fluggelände">
     <dl class="grid">
-      <div>
-        <dt>Adresse</dt>
-        <dd>86564 Breitenbrunn, Bayern</dd>
-      </div>
-      <div>
-        <dt>Piste</dt>
-        <dd>Gras, ca. 120 m Länge</dd>
-      </div>
-      <div>
-        <dt>Erlaubt</dt>
-        <dd>Motorflug, Segler, Multikopter</dd>
-      </div>
-      <div>
-        <dt>Betrieb</dt>
-        <dd>Sonnenaufgang bis Sonnenuntergang</dd>
-      </div>
-      <div>
-        <dt>Gäste</dt>
-        <dd>Willkommen mit gültigem DAeC- oder DMFV-Nachweis</dd>
-      </div>
-      <div>
-        <dt>Ausstattung</dt>
-        <dd>Vereinshütte, Strom vor Ort</dd>
-      </div>
+      <div><dt>Adresse</dt><dd>86564 Breitenbrunn, Bayern</dd></div>
+      <div><dt>Piste</dt><dd>Gras, ca. 120 m Länge</dd></div>
+      <div><dt>Erlaubt</dt><dd>Motorflug, Segler, Multikopter</dd></div>
+      <div><dt>Betrieb</dt><dd>Sonnenaufgang bis Sonnenuntergang</dd></div>
+      <div><dt>Gäste</dt><dd>Willkommen mit gültigem DAeC- oder DMFV-Nachweis</dd></div>
+      <div><dt>Ausstattung</dt><dd>Vereinshütte, Strom vor Ort</dd></div>
     </dl>
     <div class="map">
       <iframe
@@ -104,7 +86,7 @@
       </iframe>
     </div>
     <p class="map-hint">
-      Genaue Koordinaten auf Anfrage. 
+      Genaue Koordinaten auf Anfrage.
       <a href="https://www.openstreetmap.org/?mlat=48.20&mlon=10.65#map=13/48.20/10.65" target="_blank" rel="noopener">In OpenStreetMap öffnen →</a>
     </p>
   </div>
@@ -119,6 +101,8 @@
       Motorflug, Spaß mit FPV-Coptern oder detailgetreue Scale-Modelle.
       Was alle verbindet: Sorgfalt am Boden, Können in der Luft.
     </p>
+    <!-- Foto Modell/Flieger -->
+    <img class="section-img" src="modell.jpg" alt="Modellflugzeug am Start">
     <ul class="plain">
       <li>Motorflug – Verbrenner und Elektro, alle Größen</li>
       <li>Segelflug – Hangflug und Thermik im Unterallgäu</li>
@@ -142,6 +126,8 @@
       Neben dem regelmäßigen Flugbetrieb veranstalten wir jährlich a Vereinstreffen
       und nehmen an regionalen Flugtagen teil.
     </p>
+    <!-- Foto Vereinstreffen/Flugtag -->
+    <img class="section-img" src="flugtag.jpg" alt="Flugtag MFG Breitenbrunn">
     <div class="events">
       <div class="event">
         <div class="event-date"><b>12</b><span>Apr</span></div>
@@ -188,22 +174,10 @@
       freuen uns über jeden neuen Piloten.
     </p>
     <dl class="grid">
-      <div>
-        <dt>Jahresbeitrag Erwachsene</dt>
-        <dd>auf Anfrage</dd>
-      </div>
-      <div>
-        <dt>Jahresbeitrag Jugend (&lt;18)</dt>
-        <dd>auf Anfrage</dd>
-      </div>
-      <div>
-        <dt>Voraussetzung</dt>
-        <dd>Gültige Modellflug-Haftpflicht (DAeC / DMFV)</dd>
-      </div>
-      <div>
-        <dt>Gastpiloten</dt>
-        <dd>Gelegenheitsflieger nach Absprache willkommen</dd>
-      </div>
+      <div><dt>Jahresbeitrag Erwachsene</dt><dd>auf Anfrage</dd></div>
+      <div><dt>Jahresbeitrag Jugend (&lt;18)</dt><dd>auf Anfrage</dd></div>
+      <div><dt>Voraussetzung</dt><dd>Gültige Modellflug-Haftpflicht (DAeC / DMFV)</dd></div>
+      <div><dt>Gastpiloten</dt><dd>Gelegenheitsflieger nach Absprache willkommen</dd></div>
     </dl>
     <p style="margin-top:1.4rem;">
       Noch kein Führerschein? Koin Problem. Mir bieten Einweisungen und Schulungen
@@ -246,7 +220,13 @@
 <footer>
   <div class="wrap">
     <p>MFG Breitenbrunn e.V. &nbsp;·&nbsp; Modellfluggruppe Bayern</p>
-    <p><a href="#impressum">Impressum</a> &nbsp;·&nbsp; <a href="#datenschutz">Datenschutz</a></p>
+    <p>
+      <a href="#impressum">Impressum</a>
+      &nbsp;·&nbsp;
+      <a href="#datenschutz" class="tooltip-link">Datenschutz
+        <span class="tooltip">Koine Cookies, koin Tracking, nix gespeichert.<br>GitHub speichert kurz deine IP – des isch aber deren Sache, ned unsere.</span>
+      </a>
+    </p>
   </div>
 </footer>
 
@@ -269,6 +249,31 @@
     <p style="margin-top:1rem; font-size:0.84rem; color:var(--soft);">
       Haftung für Inhalte: Als Diensteanbieter sind wir für eigene Inhalte nach § 7 Abs. 1 TMG verantwortlich.
       Externe Links werden zum Zeitpunkt der Verlinkung geprüft.
+    </p>
+  </div>
+</section>
+
+<section id="datenschutz">
+  <div class="wrap">
+    <h3>Datenschutz</h3>
+    <h2>Mir tracken nix. Wirklich nix.</h2>
+    <p>
+      Koine Cookies. Koin Google Analytics. Koin Facebook-Pixel. Koin Newsletter-Tool das
+      deine Adresse irgendwo hinschickt. Koin einziges Skript das dich verfolgt.
+      Diese Seite isch so langweilig für Datenhändler – die schlafen beim Besuch sofort ein.
+    </p>
+    <p>
+      Was trotzdem passiert: Diese Seite läuft auf den Servern von
+      <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages#data-collection" target="_blank" rel="noopener">GitHub Pages</a>.
+      GitHub speichert dabei kurz deine IP-Adresse in Server-Logs – des isch technisch
+      Standard bei jedem Webserver weltweit und liegt außerhalb unserer Hand.
+      GitHub ist verpflichtet nach DSGVO, mehr erfährst du in deren
+      <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener">Datenschutzerklärung</a>.
+    </p>
+    <p>
+      Schriften werden lokal geladen – koin Google Fonts, koin externe Anfragen.
+      Verantwortlich im Sinne der DSGVO: [Name 1. Vorsitzender], MFG Breitenbrunn e.V.,
+      86564 Breitenbrunn.
     </p>
   </div>
 </section>
