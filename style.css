@@ -57,7 +57,7 @@ header { padding: 2.5rem 0 2rem; text-align: center; background: var(--bg-alt); 
   height: auto;
   /* white logo on transparent? give it a dark backing or invert: */
   /* if your logo is white-on-transparent, uncomment one of: */
-  /* filter: invert(1);                   <- turns white into black */
+  filter: invert(1);                /*   <- turns white into black */
   /* background: var(--accent); padding: 1rem; border-radius: 4px; */
 }
 
