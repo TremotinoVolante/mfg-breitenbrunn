@@ -1,9 +1,11 @@
 
-work in progress...
+...work in progress...
+
+---
 
 # MFG Breitenbrunn – Vereinswebsite
 
-`link: https://tremotinovolante.github.io/mfg-breitenbrunn`
+link: `https://tremotinovolante.github.io/mfg-breitenbrunn`
 
 Statische Website des Modellflugvereins MFG Breitenbrunn, gehostet auf GitHub Pages.  
 Kein WordPress, kein CMS, kein JavaScript, kein PHP. Nur HTML + CSS.
@@ -46,12 +48,12 @@ Jede Sektion hat einen Kommentar `id="..."` der anzeigt wo man ist:
 
 ## Fotos tauschen
 
-1. Neues Foto vorbereiten: **vorher komprimieren** auf squoosh.app (Ziel: unter 300 KB)
+1. Neues Foto vorbereiten: **vorher komprimieren** (Ziel: unter 200 KB)
 2. Datei umbenennen — gleicher Name wie die alte (z.B. `gelaende.jpg`) **oder** neuen Namen in `index.html` anpassen
 3. Datei ins Repo hochladen (GitHub → „Add file" → „Upload files")
 4. Alte Datei löschen falls nötig
 
-Empfohlene Bildgröße: **1400 × 600 px**, Format JPG.
+Empfohlene Bildgröße: **1800 × 900 px**, Format jpeg.
 
 ---
 
@@ -116,14 +118,7 @@ Wenn der Verein eine eigene Domain kauft (z.B. `mfg-breitenbrunn.de`):
 
 *Erstellt und gepflegt von Gia · Bei Fragen: Gia auf dem Flugplatz ansprechen.
 
-
-
-
-
-
-
-
-
+---
 
 © 2026 MFG Breitenbrunn e.V. All rights reserved.
 
